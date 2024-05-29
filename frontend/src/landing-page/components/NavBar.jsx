@@ -29,13 +29,8 @@ const logoStyle = {
 };
 
 
-const textStyle = {
-    marginLeft: '10px', // Adjust spacing between image and text
-    fontSize: '20px', // Adjust font size as needed
-    fontWeight: 'bold', // Adjust font weight as needed
-};
 
-function NavBar({ mode, toggleColorMode }) {
+function NavBar() {
   const [open, setOpen] = React.useState(false);
 
   const toggleDrawer = (newOpen) => () => {
@@ -59,7 +54,7 @@ function NavBar({ mode, toggleColorMode }) {
   return (
     <div className="navbar">
       <AppBar
-        position="fixed"
+        position="absolute"
         sx={{
           boxShadow: 0,
           bgcolor: 'transparent',
@@ -70,14 +65,6 @@ function NavBar({ mode, toggleColorMode }) {
         <Container maxWidth="lg">
           <Toolbar
             variant="regular"
-            sx={(theme) => ({
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'space-between',
-              flexShrink: 0,
-              borderRadius: '999px',
-
-            })}
           >
               <Box
                   sx={{

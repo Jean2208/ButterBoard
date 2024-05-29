@@ -13,7 +13,7 @@ import reactLogo from '../../assets/react.svg';
 
 export default function Hero() {
     return (
-        <Box id="hero">
+        <Box id="hero" sx={{ marginTop: 10 }}>
             <Container>
                 <Stack spacing={1} useFlexGap sx={{ width: { xs: '100%', sm: '120%' } }}>
                     <Grid container spacing={2}> {/* Add a Grid container */}
@@ -42,6 +42,8 @@ export default function Hero() {
 
                             >
                                 Where to grow your business as a blah blah blah  blah blah blah blah blah blah blah blah blah blah blah blah
+                                blah blah blah blah blah blah blah blah blah
+                                Where to grow your business as a blah blah blah  blah blah blah blah blah blah blah blah blah blah blah blah                                Where to grow your business as a blah blah blah  blah blah blah blah blah blah blah blah blah blah blah blah
                                 blah blah blah blah blah blah blah blah blah
                                 Where to grow your business as a blah blah blah  blah blah blah blah blah blah blah blah blah blah blah blah
                             </Typography>
