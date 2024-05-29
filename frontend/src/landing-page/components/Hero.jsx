@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { alpha } from '@mui/material';
+import {alpha, CardActionArea, CardMedia} from '@mui/material';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import Container from '@mui/material/Container';
@@ -9,6 +9,10 @@ import TextField from '@mui/material/TextField';
 import Typography from '@mui/material/Typography';
 import Grid from '@mui/material/Grid'; // Import Grid from Material-UI
 import reactLogo from '../../assets/react.svg';
+import calendar from '../../assets/calendar.png';
+import Card from "@mui/material/Card";
+import CardContent from "@mui/material/CardContent";
+
 
 
 export default function Hero() {
@@ -54,12 +58,21 @@ export default function Hero() {
                                 </Button>
                             </Box>
                         </Grid>
-                        <Grid item xs={12} sm={6}> {/* Second column */}
+                        <Grid item xs={12} sm={4}> {/* Second column */}
 
-                            {/*image will go here*/}
-                            <a href="https://react.dev" target="_blank">
-                                <img src={reactLogo}  className="logo" alt="React logo"/>
-                            </a>
+
+
+                            <Card sx={{ maxWidth: 300}} >
+                                <CardActionArea>
+                                    <CardMedia
+                                        component="img"
+                                        height="250"
+                                        image={calendar}
+                                        alt="calendar"
+                                    />
+
+                                </CardActionArea>
+                            </Card>
 
                         </Grid>
                     </Grid>
