@@ -39,6 +39,7 @@ export default function LandingPage() {
   return (
       <>
       <NavBar />
+
           <Hero />
             <OppositeContentTimeline/>
 
