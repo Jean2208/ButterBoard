@@ -1,8 +1,6 @@
 import * as React from 'react';
-
-import reactLogo from '../../assets/react.svg';
+import butterBoardLogo from '../../assets/ButterBoardLogo.svg';
 import '../../App.css'
-
 import Box from '@mui/material/Box';
 import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
@@ -13,7 +11,6 @@ import Typography from '@mui/material/Typography';
 import MenuItem from '@mui/material/MenuItem';
 import Drawer from '@mui/material/Drawer';
 import MenuIcon from '@mui/icons-material/Menu';
-import ToggleColorMode from './ToggleColorMode';
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
@@ -21,13 +18,7 @@ import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import InboxIcon from '@mui/icons-material/MoveToInbox';
 import MailIcon from '@mui/icons-material/Mail';
-import LoginIcon from '@mui/icons-material/Login';
-const logoStyle = {
-  width: '40px',
-  height: 'auto',
-  cursor: 'pointer',
-};
-
+import EastIcon from '@mui/icons-material/East';
 
 
 function NavBar() {
@@ -54,7 +45,7 @@ function NavBar() {
   return (
     <div className="navbar">
       <AppBar
-        position="absolute"
+        position="relative"
         sx={{
           boxShadow: 0,
           bgcolor: 'transparent',
@@ -75,20 +66,12 @@ function NavBar() {
                       px: 0,
                   }}
               >
-
-                  <Box sx={{ display: 'flex', alignItems: 'center' }}>
-                      <a href="https://react.dev" target="_blank">
-                          <img src={reactLogo} style={logoStyle} className="logo" alt="React logo" />
-                      </a>
-                      <Typography variant="h6" component="span" sx={{ ml: 1, color: 'gray'}}>
-                          ButterBoard
-                      </Typography>
-                  </Box>
-
-                  <Box sx={{display: {xs: 'none', md: 'flex'}}}>
-
-
-                  </Box>
+                  
+                <Box sx={{ display: 'flex', alignItems: 'center' }}>
+                <Typography variant="h6" component="span" sx={{ ml: 1, color: 'white', fontSize: '1.6rem', fontWeight: 600}}>
+                    ButterBoard
+                </Typography>
+                </Box>
               </Box>
               <Box
                   sx={{
@@ -99,30 +82,47 @@ function NavBar() {
               >
                   <MenuItem
                       onClick={() => scrollToSection('Calendar')}
-                      sx={{py: '6px', px: '12px'}}
+                      sx={{py: '6px', px: '20px'}}
                   >
-                      <Typography variant="body2" color="gray">
+                      <Typography variant="body2" color="white" >
                           Calendar
                       </Typography>
                   </MenuItem>
                   <MenuItem
                       onClick={() => scrollToSection('JamBoard')}
-                      sx={{py: '6px', px: '12px'}}
+                      sx={{py: '6px', px: '20px'}}
                   >
-                      <Typography variant="body2" color="gray">
+                      <Typography variant="body2" color="white" >
                           JamBoard
                       </Typography>
                   </MenuItem>
                   <MenuItem
                       onClick={() => scrollToSection('Meetings')}
-                      sx={{py: '6px', px: '12px'}}
+                      sx={{py: '6px', px: '20px'}}
                   >
-                      <Typography variant="body2" color="gray">
+                      <Typography variant="body2" color="white" >
                           Meetings
                       </Typography>
                   </MenuItem>
-                  <Button variant="contained" endIcon={<LoginIcon />} >
-                      Sign UP
+                  <Button 
+                    variant="contained" 
+                    sx={{
+                        color: 'var(--primary-color-darkblue)',
+                        borderRadius: '30px',
+                        marginLeft: '20px',
+                        textTransform: 'none',
+                        py: '10px', 
+                        px: '30px',
+                        boxShadow: 'none',
+                        backgroundColor: 'var(--neutral-color-white)',
+                        '&:hover': {
+                          backgroundColor: 'var(--hover-color-whitegray)', // Change the hover background color to red
+                        },
+
+                        }}
+                    endIcon={<EastIcon sx={{width: '15px'}}/>} 
+                    >
+                      Sign up
                   </Button>
             </Box>
 
@@ -161,7 +161,7 @@ function NavBar() {
                       component="a"
                       href="/material-ui/getting-started/templates/sign-up/"
                       target="_blank"
-                      sx={{ width: '100%' }}
+                      sx={{ width: '100%'}}
                     >
                       Sign up
                     </Button>
