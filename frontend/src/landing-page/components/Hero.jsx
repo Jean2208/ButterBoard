@@ -16,64 +16,76 @@ import CardContent from "@mui/material/CardContent";
 
 
 export default function Hero() {
+
     return (
         <Box id="hero" sx={{ marginTop: 10 }}>
             <Container>
                 <Stack spacing={1} useFlexGap sx={{ width: { xs: '100%', sm: '120%' } }}>
                     <Grid container spacing={2}> {/* Add a Grid container */}
-                        <Grid item xs={12} sm={6}> {/* First column */}
-                            <Typography variant="h2">
-                                All Productivity&nbsp;
-                                <Typography
-                                    component="span"
-                                    variant="h2"
-                                    color={"gray"}
+                        <Grid item xs={12} sm={6} sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'center'}}> {/* First column */}
+                            <Typography 
+                                variant="h2" 
+                                sx={{
+                                    marginBottom: '10px',
+                                    fontWeight: 600,
+                                    color: '#F2F2F2'
+                                }}
                                 >
-                                    Tools
-                                </Typography>
+                                All productivity tools
                             </Typography>
-                            <Typography variant="h2">
-                                All In One&nbsp;
-                                <Typography
-                                    component="span"
-                                    variant="h2"
-                                    color={"gray"}
+                            <Typography 
+                                variant="h2" 
+                                sx={{
+                                    marginBottom: '10px',
+                                    fontWeight: 600, 
+                                    color: 'var(--primary-color-darkblue)'
+                                }}
                                 >
-                                    Place
-                                </Typography>
+                                All in one place
                             </Typography>
                             <Typography
-
-                            >
-                                Where to grow your business as a blah blah blah  blah blah blah blah blah blah blah blah blah blah blah blah
-                                blah blah blah blah blah blah blah blah blah
-                                Where to grow your business as a blah blah blah  blah blah blah blah blah blah blah blah blah blah blah blah                                Where to grow your business as a blah blah blah  blah blah blah blah blah blah blah blah blah blah blah blah
-                                blah blah blah blah blah blah blah blah blah
-                                Where to grow your business as a blah blah blah  blah blah blah blah blah blah blah blah blah blah blah blah
+                                sx={{
+                                    fontSize: '20px',
+                                    fontWeight: 501,
+                                    color: 'var(--neutral-color-white)'
+                                }}
+                                >
+                                Elevate your efficiency with our comprehensive productivity suite.
                             </Typography>
-
-                            <Box sx={{ marginTop: 2 }}>
-                                <Button variant="contained" color="primary">
-                                    Start now
-                                </Button>
+                            <Box sx={{ marginTop: 3 }}>
+                              <Button 
+                                variant="contained" 
+                                sx={{
+                                    color: 'var(--hover-color-whitegray)',
+                                    borderRadius: '30px',
+                                    textTransform: 'none',
+                                    py: '10px', 
+                                    px: '30px',
+                                    boxShadow: 'none',
+                                    backgroundColor: 'var(--primary-color-darkblue)',
+                                    '&:hover': {
+                                      backgroundColor: 'var(--primary-color-darkblue)', // Change the hover background color to red
+                                    },
+                                }}
+                                >
+                                  Start now
+                              </Button>
                             </Box>
-                        </Grid>
+                        </Grid >
                         <Grid item xs={12} sm={4}> {/* Second column */}
-
-
-
-                            <Card sx={{ maxWidth: 300}} >
+                            <Card sx={{backgroundColor: 'transparent'}}>
+                                <Box sx={{borderRadius: '20px',  border: '15px solid rgba(255, 255, 255, 0)', backgroundColor: 'rgba(255, 255, 255, 0.8)'}}>
                                 <CardActionArea>
                                     <CardMedia
                                         component="img"
                                         height="250"
                                         image={calendar}
                                         alt="calendar"
+                                        sx={{ height: 'auto', backgroundColor: 'transparent', }}
                                     />
-
                                 </CardActionArea>
+                                </Box>
                             </Card>
-
                         </Grid>
                     </Grid>
                 </Stack>
