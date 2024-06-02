@@ -1,11 +1,17 @@
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+  font-family: Inter;
+  line-height: 1.25;
+  font-weight: 500;
 
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  background: white;
+
+
+  /* Color variables for reuse */
+  --primary-color-darkblue: #0A2540;
+  --neutral-color-white: #F2F2F2;
+  --hover-color-whitegray: #C8C8C8;
+  --shade-color-green: #4CAF4F;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -18,20 +24,13 @@ a {
   color: #646cff;
   text-decoration: inherit;
 }
+
 a:hover {
   color: #535bf2;
 }
 
-body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
-}
-
 h1 {
-  font-size: 3.2em;
+  font-size: 500;
   line-height: 1.1;
 }
 
@@ -46,9 +45,11 @@ button {
   cursor: pointer;
   transition: border-color 0.25s;
 }
+
 button:hover {
   border-color: #646cff;
 }
+
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
@@ -66,3 +67,33 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+
+.gradient-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  max-height: 550px;
+  width: 100%;
+  background: linear-gradient(-45deg, #0A2540, #58C65B, #1d80bb, #1d5bbb);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+  height: 100vh;
+  clip-path: polygon(0 0, 100% 0, 100% calc(100% - 50px), 0 100%);
+  transform: skewY(-5deg);
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
