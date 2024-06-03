@@ -64,7 +64,8 @@ export default function Hero() {
                                     boxShadow: 'none',
                                     backgroundColor: 'var(--primary-color-darkblue)',
                                     '&:hover': {
-                                      backgroundColor: 'var(--primary-color-darkblue)', // Change the hover background color to red
+                                      backgroundColor: 'var(--hover-color-darkblue)',
+                                      boxShadow: 'none',
                                     },
                                 }}
                                 >
