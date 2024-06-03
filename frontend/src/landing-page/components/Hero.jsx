@@ -18,7 +18,7 @@ import CardContent from "@mui/material/CardContent";
 export default function Hero() {
 
     return (
-        <Box id="hero" sx={{ marginTop: 10 }}>
+        <Box sx={{ marginTop: 10 }}>
             <Container>
                 <Stack spacing={1} useFlexGap sx={{ width: { xs: '100%', sm: '120%' } }}>
                     <Grid container spacing={2}> {/* Add a Grid container */}
