@@ -1,5 +1,4 @@
 import * as React from 'react';
-import butterBoardLogo from '../../assets/ButterBoardLogo.svg';
 import '../../App.css'
 import Box from '@mui/material/Box';
 import AppBar from '@mui/material/AppBar';
