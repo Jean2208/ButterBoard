@@ -1,7 +1,9 @@
 :root {
+  /* Define the font size and assign it to a varible */
   font-family: Inter;
   line-height: 1.25;
   font-weight: 500;
+
 
   color-scheme: light dark;
   background: white;
@@ -10,6 +12,7 @@
   /* Color variables for reuse */
   --primary-color-darkblue: #0A2540;
   --neutral-color-white: #F2F2F2;
+  --hover-color-darkblue: #071828;
   --hover-color-whitegray: #C8C8C8;
   --shade-color-green: #4CAF4F;
 
@@ -17,6 +20,15 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+body {
+  margin: 0 0;
 }
 
 a {
@@ -27,11 +39,6 @@ a {
 
 a:hover {
   color: #535bf2;
-}
-
-h1 {
-  font-size: 500;
-  line-height: 1.1;
 }
 
 button {
@@ -68,21 +75,12 @@ button:focus-visible {
   }
 }
 
-.gradient-background {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: -1;
-  max-height: 550px;
-  width: 100%;
+#hero {
+  position: relative;
+  top: -16px;
   background: linear-gradient(-45deg, #0A2540, #58C65B, #1d80bb, #1d5bbb);
   background-size: 400% 400%;
   animation: gradient 15s ease infinite;
-  height: 100vh;
-  clip-path: polygon(0 0, 100% 0, 100% calc(100% - 50px), 0 100%);
-  transform: skewY(-5deg);
 }
 
 @keyframes gradient {
