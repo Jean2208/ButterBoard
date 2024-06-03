@@ -51,6 +51,7 @@ function NavBar() {
           bgcolor: 'transparent',
           backgroundImage: 'none',
           mt: 2,
+          padding: '12px',
         }}
       >
         <Container maxWidth="lg">
