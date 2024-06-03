@@ -116,7 +116,8 @@ function NavBar() {
                         boxShadow: 'none',
                         backgroundColor: 'var(--neutral-color-white)',
                         '&:hover': {
-                          backgroundColor: 'var(--hover-color-whitegray)', // Change the hover background color to red
+                          backgroundColor: 'var(--hover-color-whitegray)',
+                          boxShadow: 'none',
                         },
 
                         }}
