@@ -27,20 +27,6 @@ function NavBar() {
     setOpen(newOpen);
   };
 
-  const scrollToSection = (sectionId) => {
-    const sectionElement = document.getElementById(sectionId);
-    const offset = 128;
-    if (sectionElement) {
-      const targetScroll = sectionElement.offsetTop - offset;
-      sectionElement.scrollIntoView({ behavior: 'smooth' });
-      window.scrollTo({
-        top: targetScroll,
-        behavior: 'smooth',
-      });
-      setOpen(false);
-    }
-  };
-
   return (
     <div className="navbar">
       <AppBar
@@ -49,8 +35,6 @@ function NavBar() {
           boxShadow: 0,
           bgcolor: 'transparent',
           backgroundImage: 'none',
-          mt: 2,
-          padding: '12px',
         }}
       >
         <Container maxWidth="lg">
@@ -81,7 +65,6 @@ function NavBar() {
                   }}
               >
                   <MenuItem
-                      onClick={() => scrollToSection('Calendar')}
                       sx={{py: '6px', px: '20px'}}
                   >
                       <Typography variant="body2" color="white" >
@@ -89,7 +72,6 @@ function NavBar() {
                       </Typography>
                   </MenuItem>
                   <MenuItem
-                      onClick={() => scrollToSection('JamBoard')}
                       sx={{py: '6px', px: '20px'}}
                   >
                       <Typography variant="body2" color="white" >
@@ -97,7 +79,6 @@ function NavBar() {
                       </Typography>
                   </MenuItem>
                   <MenuItem
-                      onClick={() => scrollToSection('Meetings')}
                       sx={{py: '6px', px: '20px'}}
                   >
                       <Typography variant="body2" color="white" >
@@ -136,7 +117,7 @@ function NavBar() {
                 onClick={toggleDrawer(true)}
                 sx={{ minWidth: '30px', p: '4px' }}
               >
-                <MenuIcon sx={{ color: 'var(--neutral-color-white'}} />
+                <MenuIcon sx={{ color: 'var(--neutral-color-white)'}} />
               </Button>
               <Drawer anchor="right" open={open} onClose={toggleDrawer(false)}>
                 <Box sx={{ width: 250 }}>
