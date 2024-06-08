@@ -19,9 +19,9 @@ export default function Hero() {
 
     return (
         <Box sx={{ marginTop: 10 }}>
-            <Container>
+            <Container sx={{marginTop: '0px'}}>
                 <Stack spacing={1} useFlexGap sx={{ width: { xs: '100%', sm: '120%' } }}>
-                    <Grid container spacing={2}> {/* Add a Grid container */}
+                    <Grid container spacing={2} > {/* Add a Grid container */}
                         <Grid item xs={12} sm={6} sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'center'}}> {/* First column */}
                             <Typography 
                                 variant="h2" 

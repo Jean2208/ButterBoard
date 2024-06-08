@@ -80,6 +80,7 @@ button:focus-visible {
   top: -16px;
   background: linear-gradient(-45deg, #0A2540, #58C65B, #1d80bb, #1d5bbb);
   background-size: 400% 400%;
+  padding: 30px;
   animation: gradient 15s ease infinite;
 }
 
