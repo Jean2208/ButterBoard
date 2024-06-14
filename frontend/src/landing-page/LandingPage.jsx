@@ -9,6 +9,7 @@ import ToggleButtonGroup from '@mui/material/ToggleButtonGroup';
 import AutoAwesomeRoundedIcon from '@mui/icons-material/AutoAwesomeRounded';
 import Hero from './components/Hero';
 import NavBar from "./components/NavBar";
+import CalendarBox from "./components/CalendarBox.jsx";
 
 
 export default function LandingPage() {
@@ -18,6 +19,7 @@ export default function LandingPage() {
       <div className="gradient-background" />
       <NavBar />
       <Hero />
+        <CalendarBox/>
     </>
     );
 }
