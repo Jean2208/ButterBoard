@@ -15,9 +15,13 @@ export default function LandingPage() {
 
   return (
     <>
-      <div className="gradient-background" />
-      <NavBar />
-      <Hero />
+      {/* Hero Section */}
+      <section id="hero">
+          <div className="container">
+            <NavBar />
+            <Hero />
+          </div>
+      </section>
     </>
     );
 }

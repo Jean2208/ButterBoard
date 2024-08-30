@@ -18,10 +18,10 @@ import CardContent from "@mui/material/CardContent";
 export default function Hero() {
 
     return (
-        <Box id="hero" sx={{ marginTop: 10 }}>
-            <Container>
+        <Box sx={{ marginTop: 10 }}>
+            <Container sx={{marginTop: '0px'}}>
                 <Stack spacing={1} useFlexGap sx={{ width: { xs: '100%', sm: '120%' } }}>
-                    <Grid container spacing={2}> {/* Add a Grid container */}
+                    <Grid container spacing={2} > {/* Add a Grid container */}
                         <Grid item xs={12} sm={6} sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'center'}}> {/* First column */}
                             <Typography 
                                 variant="h2" 
@@ -64,7 +64,8 @@ export default function Hero() {
                                     boxShadow: 'none',
                                     backgroundColor: 'var(--primary-color-darkblue)',
                                     '&:hover': {
-                                      backgroundColor: 'var(--primary-color-darkblue)', // Change the hover background color to red
+                                      backgroundColor: 'var(--hover-color-darkblue)',
+                                      boxShadow: 'none',
                                     },
                                 }}
                                 >
