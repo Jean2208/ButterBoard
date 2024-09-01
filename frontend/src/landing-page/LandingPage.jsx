@@ -10,16 +10,17 @@ import AutoAwesomeRoundedIcon from '@mui/icons-material/AutoAwesomeRounded';
 import Hero from './components/Hero';
 import NavBar from "./components/NavBar";
 import CalendarBox from "./components/CalendarBox.jsx";
-
-
+import { Link } from 'react-router-dom';
+import TodoApp from "./components/TodoApp.jsx";
 export default function LandingPage() {
 
   return (
     <>
-      <div className="gradient-background" />
-      <NavBar />
-      <Hero />
-        <CalendarBox/>
+      {/*<div className="gradient-background" />*/}
+      {/*<NavBar />*/}
+      {/*<Hero />*/}
+      {/*  <CalendarBox/>*/}
+        <TodoApp/>
     </>
     );
 }
